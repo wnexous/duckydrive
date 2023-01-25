@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+:root {
+  --primary-dark-100: hsl(0, 0%, 5%);
+  --primary-dark-500: hsl(0, 0%, 15%);
+  --primary-dark-900: hsl(0, 0%, 30%);
+
+  --primary-light-100: hsl(0, 0%, 80%);
+  --primary-light-500: hsl(0, 0%, 90%);
+  --primary-light-900: hsl(0, 0%, 100%);
+  --display-mode: inline-flex;
+
+  --animation-delay: 0.4s
+}
+
+.centralize_h {
+  display: inline-flex;
+  margin-block: auto;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.link_btn {
+  color: var(--primary-light-100);
+  background-color: var(--primary-dark-100);
+  border: none;
+  margin: 0%;
+  /* height: 2.5rem; */
+  /* padding-inline: 100vh; */
+  margin-inline: 0.5rem;
+  border-radius: 15px;
+  padding-inline: 1rem;
+  cursor: pointer;
+  min-inline-size: 100%;
+  margin-block: 0.2rem;
+  -webkit-transition: var(--animation-delay);
+  min-width: 5%;
+  white-space: nowrap;
+  color: var(--primary-light-100);
+  text-decoration: none;
+  align-items: center;
+}
+
+.link_btn:hover {
+  color: var(--primary-dark-100);
+  background-color: var(--primary-light-100);
+}

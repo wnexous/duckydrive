@@ -1,0 +1,99 @@
+header {
+    display: flex;
+    vertical-align: middle;
+    color: rgb(200, 200, 200);
+    background-color: var(--primary-dark-500);
+    padding-block: 1rem;
+    padding-inline: 1.5rem;
+}
+
+.right {
+    margin-right: auto;
+}
+
+.w_100 {
+    width: max-content !important;
+}
+
+.w_50 {
+    width: 50%;
+}
+
+.w_30 {
+    width: 30%;
+}
+
+.h_100 {
+    height: 100%;
+}
+
+.h_50 {
+    height: 50%;
+}
+
+.icon {
+    font-weight: 500;
+    font-size: 1.5rem;
+    background-color: var(--primary-dark-100);
+    padding-right: 1.2rem;
+    padding-block: 0.7rem;
+    border-radius: 15px;
+    -webkit-transition: var(--animation-delay);
+    content: "";
+    cursor: pointer;
+    color: var(--primary-light-100);
+    text-decoration: none;
+}
+
+.icon:after {
+    content: "DUCKYDRIVE";
+    -webkit-transition: var(--animation-delay);
+}
+
+.icon img {
+    filter: invert(90%);
+    width: 2.1rem;
+    margin-inline: 1rem;
+}
+
+.display_mode {
+    margin: auto;
+    display: var(--display-mode) !important;
+}
+
+.login_btns {
+    margin: 0;
+}
+
+@media (max-width: 600px) {
+    .icon {
+        width: max-content;
+        padding-right: 0;
+        -webkit-transition: var(--animation-delay);
+    }
+
+    .icon:after {
+        content: "";
+        -webkit-transition: var(--animation-delay);
+    }
+
+    /* :root {
+
+        --display-mode: inline-block
+    } */
+}
+
+/* .logo_icon {
+    color: aquamarine;
+    width: 50px;
+}
+
+.logo {
+    display: inline-flex !important;
+    align-items: center;
+    vertical-align: middle;
+    margin-block: auto;
+    justify-content: center;
+    font-weight: 700;
+
+} */
