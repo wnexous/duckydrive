@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-dark-100);
 }
 
 code {
@@ -32,6 +33,7 @@ code {
   align-items: center;
 }
 
+
 .link_btn {
   color: var(--primary-light-100);
   background-color: var(--primary-dark-100);
@@ -52,6 +54,7 @@ code {
   text-decoration: none;
   align-items: center;
 }
+
 
 .link_btn:hover {
   color: var(--primary-dark-100);
