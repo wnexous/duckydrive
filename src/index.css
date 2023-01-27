@@ -21,6 +21,8 @@ code {
   --primary-light-100: hsl(0, 0%, 80%);
   --primary-light-500: hsl(0, 0%, 90%);
   --primary-light-900: hsl(0, 0%, 100%);
+
+  --clicable-text: hsl(214, 100%, 50%);
   --display-mode: inline-flex;
 
   --animation-delay: 0.4s

@@ -1,3 +1,4 @@
+import { reduxActions } from '../../actions'
 const INITIAL_STATE = {
   name: '',
   usertag: '',
@@ -6,8 +7,9 @@ const INITIAL_STATE = {
 }
 
 export default function userLogin(state = INITIAL_STATE, action) {
+  const MODULE_NAME = reduxActions.modules.userLogin
   switch (action.type) {
-    case '@userLogin/SET_LOGIN': {
+    case [MODULE_NAME, 'SET_LOGIN'].join('/'): {
       return (state = action.data)
     }
     default:

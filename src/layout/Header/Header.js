@@ -20,10 +20,10 @@ export default function Header() {
 
       <div className={[styles.display_mode, styles.login_btns].join(' ')}>
         <Link className="link_btn" to="/register">
-          <p>Create Account</p>
+          <p>create account</p>
         </Link>
         <Link className="link_btn" to="/login">
-          <p>Login</p>
+          <p>login</p>
         </Link>
       </div>
     </header>

@@ -1,4 +1,4 @@
-import './Register.css'
+import './Register.module.css'
 import style from './../../modules/styles/Styles.module.css'
 import Input from '../../components/Input'
 import Title from '../../components/Title'
@@ -10,6 +10,7 @@ import Button from '../../components/Button'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
 import { reduxActions } from '../../store/actions'
+import { Link } from 'react-router-dom'
 
 export default function Register() {
   const dispatch = useDispatch()
@@ -21,22 +22,26 @@ export default function Register() {
   function userRegister(e) {
     e.preventDefault()
     dispatch(reduxActions.setLogin({ userLogin, userTag, userPass, userToken }))
+    localStorage.setItem("userLogin", userLogin)
+    
+    
   }
 
   return (
     <div className={style.centralize_div}>
       <form className={style.field_forms}>
-        <Title>Crie sua conta.</Title>
+        {localStorage.getItem('userLogin')}
+        <Title>create your account.</Title>
         <Input
           Icon={<FaUser />}
-          placeholder="Nome de usuário"
+          placeholder="your name"
           type="text"
           name="name"
           set={setUserLogin}
         />
         <Input
           Icon={<FaUserTag />}
-          placeholder="Tag de usuário"
+          placeholder="nametag"
           type="text"
           autoComplete="user"
           name="usertag"
@@ -44,7 +49,7 @@ export default function Register() {
         />
         <Input
           Icon={<RiLockPasswordFill />}
-          placeholder="Digite sua senha"
+          placeholder="type your password"
           type="password"
           autoComplete="password"
           name="pwd_1"
@@ -52,14 +57,20 @@ export default function Register() {
         />
         <Input
           Icon={<BsFillKeyFill />}
-          placeholder="Chave de convite"
+          placeholder="invite token"
           type="text"
           autoComplete="token"
           name="token"
           set={setUserToken}
         />
-        <Button onClick={userRegister}>Registrar</Button>
+        <Button onClick={userRegister}>create account</Button>
       </form>
+      <p className={style.description_forms}>
+        when you click create account, you will agree to the{' '}
+        <Link className={style.description_forms_link} to="/ducky-terms">
+          ducky terms.
+        </Link>
+      </p>
     </div>
   )
 }

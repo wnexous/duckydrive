@@ -1,17 +1,37 @@
 .centralize_div {
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     margin-block: 7rem;
     margin-inline: 1rem;
+    align-items: center;
+    align-content: center;
+}
+
+.centralize_div div {
+    margin: 0%;
 }
 
 .field_forms {
     border-radius: 20px;
     padding: 2rem;
     background-color: var(--primary-dark-500);
-    width: 30rem;
-    margin: 0;
+    width: 80%;
+    margin-inline: auto;
     color: var(--primary-light-500);
+    max-width: 30rem;
 }
 
+.description_forms {
+    color: var(--primary-dark-900);
+    overflow: none;
+    align-items: center;
+    text-align: center;
+    inline-size: 100%;
+    margin-inline: auto;
+    max-width: 30rem
+}
+
+.description_forms_link {
+    color: var(--clicable-text);
+}
